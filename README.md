@@ -35,4 +35,4 @@ Assignments/
 
 *Table of contents*
 
-* [First Assignemnt, running a javascript file]('./Assignments/First/DOC.md')
+* [First Assignemnt, running a javascript file]('/Assignments/First/DOC.md')
