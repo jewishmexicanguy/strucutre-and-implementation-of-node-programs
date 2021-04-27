@@ -1,0 +1,15 @@
+https://en.wikipedia.org/wiki/B%C3%A9zier_curve
+
+A Bézier curve (/ˈbɛz.i.eɪ/ BEH-zee-ay)[1] is a parametric curve used in computer graphics and related fields.[2] The curves, which are related to Bernstein polynomials, are named after Pierre Bézier, who used it in the 1960s for designing curves for the bodywork of Renault cars.[3] Other uses include the design of computer fonts and animation.[3] Bézier curves can be combined to form a Bézier spline, or generalized to higher dimensions to form Bézier surfaces.[3] The Bézier triangle is a special case of the latter.
+
+In vector graphics, Bézier curves are used to model smooth curves that can be scaled indefinitely. "Paths", as they are commonly referred to in image manipulation programs,[note 1] are combinations of linked Bézier curves. Paths are not bound by the limits of rasterized images and are intuitive to modify.
+
+Bézier curves are also used in the time domain, particularly in animation[4], user interface[note 2] design and smoothing cursor trajectory in eye gaze controlled interfaces.[5] For example, a Bézier curve can be used to specify the velocity over time of an object such as an icon moving from A to B, rather than simply moving at a fixed number of pixels per step. When animators or interface designers talk about the "physics" or "feel" of an operation, they may be referring to the particular Bézier curve used to control the velocity over time of the move in question.
+
+This also applies to robotics where the motion of a welding arm, for example, should be smooth to avoid unnecessary wear.
+
+The mathematical basis for Bézier curves—the Bernstein polynomials—was established in 1912, but the polynomials were not applied to graphics until some 50 years later when mathematician Paul de Casteljau in 1959 developed de Casteljau's algorithm, a numerically stable method for evaluating the curves, and became the first to apply them to computer-aided design at French automaker Citroën.[6] Yet, de Casteljau's method was patented in France but not published until the 80s[7] while the Bézier polynomials were widely publicised in the 1960s by the French engineer Pierre Bézier, who discovered them independently and used them to design automobile bodies at Renault.
+
+Specific cases
+A Bézier curve is defined by a set of control points P0 through Pn, where n is called the order of the curve (n = 1 for linear, 2 for quadratic, etc.). The first and last control points are always the endpoints of the curve; however, the intermediate control points (if any) generally do not lie on the curve. The sums in the following sections are to be understood as affine combinations – that is, the coefficients sum to 1.
+
