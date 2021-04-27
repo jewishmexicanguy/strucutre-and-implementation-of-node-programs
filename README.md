@@ -13,6 +13,7 @@ There will also be an Assignment.md file which will have a challenge meant for *
 
 I would suggest you write your solution on the same folder for ease of navigation and keep track of your work.
 
+```
 Assignments/
 |
 |
@@ -30,6 +31,7 @@ Assignments/
 |
 |
 | --- Third/
+```
 
 *Table of contents*
 
