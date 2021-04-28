@@ -1,3 +1,5 @@
+import fs from 'fs';
+
 const mod1 = () => {
   return 'this is module mod1 and is the default export fo this module';
 };
@@ -31,4 +33,26 @@ function subtract (a, b) {
 export const BasicMath = {
   add,
   subtract
+};
+
+export const readFromFileSynchronously = (path) => {
+  /**
+   * https://nodejs.org/api/fs.html#fs_fs_readfilesync_path_options
+   */
+  return fs.readFileSync(path, 'utf-8');
+};
+
+export const readFromFileAsynchronously = (path) => {
+  let content = null;
+  /**
+   * https://nodejs.org/api/fs.html#fs_fs_readfile_path_options_callback
+   */
+  fs.readFile(path, 'utf8', (err, data) => {
+    if(err) {
+      console.log(err);
+      return;
+    }
+    content = data;
+    return content;
+  });
 };
