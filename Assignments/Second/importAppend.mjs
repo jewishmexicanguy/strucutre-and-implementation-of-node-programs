@@ -5,7 +5,16 @@ var beginningTime = `BEGINNING CALCULATIONS ON : ${Date.now()}`;
 
 // what matters is that the input variable matches the output variable
 function beginningCalc(x) {
-  return appendMe(x);
+  /**
+   * This will work, but it is bad form to try to return something that does not return anything.
+   * appendMe() returns nothing
+   */
+  //return appendMe(x);
+  /**
+   * Instead write the two lines below.
+   */
+  appendMe(x);
+  return;
 }
 
 beginningCalc(beginningTime + "\n");
@@ -15,7 +24,15 @@ beginningCalc(beginningTime + "\n");
 var endingTime = `ENDING CALCULATIONS ON : ${Date.now()}`;
 
 function endingCalc(y) {
-  return appendMe(y);
+  /**
+   * Same comment here.
+   */
+  //return appendMe(y);
+  appendMe(y);
+  return;
 }
-
-endingCalc("\n" + endingTime);
+/**
+ * Why are you adding a new line at the beggining instead of at the end?
+ */
+//endingCalc("\n" + endingTime);
+endingCalc(endingTime + "\n");

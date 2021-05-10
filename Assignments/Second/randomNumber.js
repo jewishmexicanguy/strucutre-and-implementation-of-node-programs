@@ -16,7 +16,12 @@ const getRandomNumber = (min, max, totalTimesRan) => {
 const data = `${getRandomNumber(1, 1000000, 1000)}`;
 
 fs.appendFile(
-  "/Users/matthew/Desktop/projects/strucutre-and-implementation-of-node-programs/Assignments/Second/numbers.txt",
+  //"/Users/matthew/Desktop/projects/strucutre-and-implementation-of-node-programs/Assignments/Second/numbers.txt",
+  /**
+   * Please use relative paths
+   * It is very unlikley that other's machines will have the same path's that you do on your machine. 
+   * */
+  "./numberst.txt",
   data,
   "utf8",
   // callback function
