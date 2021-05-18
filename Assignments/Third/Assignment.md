@@ -19,6 +19,19 @@ We will be reffering and using what we write here for the next three Assignments
 
 - After these three tasks are done, schedule a review with the proctor.
 
+- Using the filled out worksheet for getting requirements from features meet the following objectives
+
+- Write a csv file that has the following headers/column names, "date time", "symbol", "open", "high", "low", "close", "volume".
+
+- You must demonstrate appending new rows to the CSV file
+
+- You must demonstrate inserting rows anywhere in the csv file
+
+- You must demonstrate removing a row anywhere in the csv file
+
+- You must demonstrate changing any cell in the csv file
+
+- 
 # Reference material
 
 [CSV Deffinition](https://en.wikipedia.org/wiki/Comma-separated_values)
