@@ -2,6 +2,8 @@
 
 What a CSV file is:
   - A delimited text file that uses comma seperated values. Each line of the file is a data record and each record consists of one or more fields that are seperated by commas. The use of the comma is how we name this type of file format. It typicallay stores tabular data (consisting of numbers and text).
+
   - The CSV file is one of the most common formats we encounter because almost every program uses them. The CSV file is considered the Defacto Standard for sharing data between systems.
+  
   - Structurally speaking, the CSV file is categorized intos rows and columns. Every row should have the SAME number of columns and each row wil be seperated by a comma value, known as a delimiter. This type of structure in a text file is flexible, seeings that we can convert the data structure into more recognizable formats such as JSON and XML.
 
