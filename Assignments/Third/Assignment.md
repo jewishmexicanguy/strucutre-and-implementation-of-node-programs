@@ -31,7 +31,14 @@ We will be reffering and using what we write here for the next three Assignments
 
 - You must demonstrate changing any cell in the csv file
 
-- 
+  - For the sake of demonstration the values under the "date time" column should be the current date and time when the code is being run
+  - "symbol" can be any combination of 6 letters from english alphabet
+  - "open" must be a decimal from 10,000 to 0.001
+  - "high" must be a decimal from 10,000 to 0.001
+  - "low" must be a decimal from 10,000 to 0.001
+  - "close" must be a decimal from 10,000 to 0.001
+  - "open" must be a decimal from 1,000,000 to .01
+  
 # Reference material
 
 [CSV Definition](https://en.wikipedia.org/wiki/Comma-separated_values)
