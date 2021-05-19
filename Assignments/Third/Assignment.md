@@ -9,7 +9,7 @@ We will be reffering and using what we write here for the next three Assignments
 > The primary objective will be to write a simple CSV writter and reader.
 >> The secondary objective will be to analyse and query CSV files. 
 
-# Assingment
+# Assignment
 
 - Explain what a CSV file is. Not just from a deffinition standpoint but from a structure standpoint. 
 
@@ -34,4 +34,4 @@ We will be reffering and using what we write here for the next three Assignments
 - 
 # Reference material
 
-[CSV Deffinition](https://en.wikipedia.org/wiki/Comma-separated_values)
+[CSV Definition](https://en.wikipedia.org/wiki/Comma-separated_values)
