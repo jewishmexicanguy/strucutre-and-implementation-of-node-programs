@@ -38,6 +38,7 @@ We will be reffering and using what we write here for the next three Assignments
   - "low" must be a decimal from 10,000 to 0.001
   - "close" must be a decimal from 10,000 to 0.001
   - "open" must be a decimal from 1,000,000 to .01
+  - "volume" must be a decimal from 10,000 to 0.001
   
 # Reference material
 

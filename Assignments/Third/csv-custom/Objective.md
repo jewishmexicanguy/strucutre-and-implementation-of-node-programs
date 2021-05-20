@@ -21,12 +21,8 @@
           - The point of intersection between the Column and Row.
         * Define the structure of a Row, a Header, and the Cell.
         * When reading a CSV file, be able to have the entire content of the file as multiple Javascript Objects.
-          -
-
-          
-        
-
     2) Writing CSV files
+
     3) Manipulating CSV files in many different ways.
       - Adding and Deleting Rows, Columns, or Cells, whether in groups or solely as specific and individual cells.
 ////////////////////////////////
