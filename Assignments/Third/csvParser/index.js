@@ -1,5 +1,7 @@
 const fs = require("fs");
 const csv = require("csv-parser");
+const fetch = require("node-fetch");
+const { parse } = require("path");
 
 const results = [];
 
@@ -25,8 +27,10 @@ fs.createReadStream("input.csv")
     console.table(results);
   });
 
-function writeToCSVFile(results) {
-  const filename = "output.csv";
+console.log(results);
+
+async function writeToCSVFile(results) {
+  const filename = await fetch("output.csv");
   fs.writeFile(filename, extractAsCSV(results), (err) => {
     if (err) {
       console.log("Error writing to CSV file", err);
@@ -36,11 +40,25 @@ function writeToCSVFile(results) {
   });
 }
 
-function extractAsCSV(results) {
-  const header = ["dateTime, symbol, open, high, low, close, volume"];
-  const rows = results.map(
-    (datum) =>
-      `${datum.dateTime} ${datum.symbol} ${datum.open} ${datum.high} ${datum.low} ${datum.close} ${datum.volume}`
-  );
+async function extractAsCSV(results) {
+  let header = [
+    "Date/Time",
+    "Symbol",
+    "Open",
+    "High",
+    "Low",
+    "Close",
+    "Volume",
+  ];
+
+  const data = await results.text();
+
+  const rows = data.split("\n").slice(1);
+  rows.forEach((elt) => {
+    const row = elt.split(",");
+    console.log(row);
+  });
+
   return header.concat(rows).join("\n");
+  console.log(rows);
 }
