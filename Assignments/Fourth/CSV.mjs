@@ -14,13 +14,17 @@ class CSV {
    */
   getFileContents() {
     var contents = fs.readFileSync(this.file, "utf-8");
+
     let lines = contents.split("\n");
     // I want to have the contents broken down into its constituent parts and represented as javascript class objects.
+    
     this.columns = new Row(
       -1,
       lines.slice(0)[0].split(",")
     );
+
     let rows = lines.slice(1, lines.length);
+
     for (var i = 0; i < rows.length; i++) {
       this.rows.push(
         new Row(
