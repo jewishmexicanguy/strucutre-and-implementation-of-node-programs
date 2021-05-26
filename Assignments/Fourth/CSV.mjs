@@ -2,6 +2,7 @@ import Row from './Row.mjs';
 import fs from 'fs';
 
 class CSV {
+  // TODO: Should we be passing every instance of 'this' that we are utilizing as arguments within the constructor's paranthesis?
   constructor(file) {
     this.file = file;
     this.columns = null;
@@ -32,6 +33,7 @@ class CSV {
   /**
    * Return rows as a string, with a new line between each row
    */
+  // TODO: Should we abstract the stringify method found in the Row component inside of the function body below or create it's own unique ability to Stringify the CSV file?
   stringifyCSV() {
     let s = "";
     s += this.columns.stringify();

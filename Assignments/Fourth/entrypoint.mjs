@@ -1,3 +1,4 @@
+// TODO: should we import a module or library that we are not using to remove extraneous code?
 import fs from 'fs';
 import CSV from './CSV.mjs';
 
@@ -10,6 +11,7 @@ console.log(myCsv);
 
 
 // non extendible way but easy way to modify cell values
+// TODO: can we modify cell values using and extendible method as opposed to a non-extendible method?
 
 myCsv.rows[2]
 .getCell(0)

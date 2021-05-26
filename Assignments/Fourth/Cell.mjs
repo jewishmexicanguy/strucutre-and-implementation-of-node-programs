@@ -1,4 +1,5 @@
 class Cell {
+  // TODO: do we need to have a functional argument in the constructor if it the properties aren't being passed into other components?
   constructor(value) {
     this.value = value;
     return;
