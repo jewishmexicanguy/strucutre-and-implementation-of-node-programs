@@ -1,5 +1,6 @@
-import Row from './Row.mjs';
-import fs from 'fs';
+import Row from "./Row.mjs";
+import Column from "./Column.mjs";
+import fs from "fs";
 
 class CSV {
   // TODO: Should we be passing every instance of 'this' that we are utilizing as arguments within the constructor's paranthesis?
@@ -17,21 +18,13 @@ class CSV {
 
     let lines = contents.split("\n");
     // I want to have the contents broken down into its constituent parts and represented as javascript class objects.
-    
-    this.columns = new Row(
-      -1,
-      lines.slice(0)[0].split(",")
-    );
+
+    this.columns = new Column(-1, lines.slice(0)[0].split(","));
 
     let rows = lines.slice(1, lines.length);
 
     for (var i = 0; i < rows.length; i++) {
-      this.rows.push(
-        new Row(
-          i,
-          rows[i].split(",")
-        )
-      );
+      this.rows.push(new Row(i, rows[i].split(",")));
     }
   }
   /**
@@ -42,10 +35,9 @@ class CSV {
     let s = "";
     s += this.columns.stringify();
     s += "\n";
-    for(let i = 0; i < this.rows.length; i++) {
-      s+= this.rows[i].stringify();
-      if(i == this.rows.length - 1) {
-
+    for (let i = 0; i < this.rows.length; i++) {
+      s += this.rows[i].stringify();
+      if (i == this.rows.length - 1) {
       } else {
         s += "\n";
       }

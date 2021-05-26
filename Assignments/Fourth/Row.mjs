@@ -1,4 +1,4 @@
-import Cell from './Cell.mjs';
+import Cell from "./Cell.mjs";
 
 /**
  * Rows are collections of cells.
@@ -20,38 +20,38 @@ class Row {
   }
   /**
    * Return the position of this row in the CSV file
-   * @param index 
-   * @returns 
+   * @param index
+   * @returns
    */
-  getIndex(){
+  getIndex() {
     return this.index;
   }
   /**
    * Return the cell within this row at the specified cell index
-   * @param index 
+   * @param index
    */
   getCell(index) {
     return this.cells[index];
   }
   /**
    * Set the value of a cell at the specified cell index
-   * @param index 
-   * @param value 
-   * @returns 
+   * @param index
+   * @param value
+   * @returns
    */
   setCell(index, value) {
     this.cells[index].setValue(value);
     return;
   }
   /**
-   * 
+   *
    * @returns return the value of a row as a string
    */
   stringify() {
     var s = "";
     for (var i = 0; i < this.cells.length; i++) {
       s += this.getCell(i).getValue();
-      if(i == this.cells.length - 1) {
+      if (i == this.cells.length - 1) {
         // do nothing
       } else {
         s += ",";
