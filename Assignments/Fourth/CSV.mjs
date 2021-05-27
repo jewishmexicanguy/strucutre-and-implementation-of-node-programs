@@ -10,6 +10,10 @@ class CSV {
     this.rows = [];
     this.getFileContents();
   }
+
+  traverseCSV(x, y) {
+    var x = 
+  }
   /**
    * open the file for reading it's contents
    */

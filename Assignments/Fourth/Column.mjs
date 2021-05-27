@@ -1,10 +1,10 @@
 import Cell from "./Cell.mjs";
 
-class Column {
+class Column extends Row {
   constructor(index, values) {
     this.index = index;
     this.cells = [];
-    
+
     for (var i = 0; i < values.length; i++) {
       this.cells.push(new Cell(values[i]));
     }
