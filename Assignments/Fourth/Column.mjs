@@ -3,6 +3,7 @@ import Row from "./Row.mjs";
 /**
  * The Column class is a specialized case of the Row class.
  */
+
 class Column extends Row {
   constructor(index, values) {
     super(index, values);

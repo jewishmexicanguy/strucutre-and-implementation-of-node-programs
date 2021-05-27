@@ -10,10 +10,6 @@ class CSV {
     this.rows = [];
     this.getFileContents();
   }
-
-  traverseCSV(x, y) {
-    var x = 
-  }
   /**
    * open the file for reading it's contents
    */
@@ -30,6 +26,16 @@ class CSV {
     for (var i = 0; i < rows.length; i++) {
       this.rows.push(new Row(i, rows[i].split(",")));
     }
+  }
+
+  findCell(row, column) {
+    // find the index of the specific Row you are selecting
+    var specificRow = this.rows[row];
+
+    // find the specific Cell you are looking for
+    var specificCell = specificRow.getCell(column);
+
+    return specificCell;
   }
   /**
    * Return rows as a string, with a new line between each row

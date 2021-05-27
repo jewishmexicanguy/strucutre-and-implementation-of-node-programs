@@ -21,3 +21,5 @@ console.log(myCsv);
 myCsv.writeCSVFile("output.csv");
 
 console.log(myCsv.columns);
+
+console.log(myCsv.findCell(2, 3))
