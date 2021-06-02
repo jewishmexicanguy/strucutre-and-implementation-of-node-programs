@@ -3,7 +3,7 @@ import util from "../util.mjs";
 function generateNumbers(length, min, max) {
   var cardinality = [];
   var numbers = [];
-  var result = {};
+  var newArray = [];
 
   for (length; length > 0; length--) {
     cardinality.push(length);
@@ -24,49 +24,24 @@ function generateNumbers(length, min, max) {
     });
   }
 
-  // Combining the Two Arrays by their Index Values into their own Objects inside of an Array
-  var result = numbers.map(function (obj, index) {
+  // Combining the Two Arrays by their Index Values into their own Objects inside of an Array #1
+  // var result = numbers.map(function (obj, index) {
+  //   var myObj = {};
+  //   myObj[cardinality[index]] = obj;
+  //   return myObj;
+  // });
+
+  // Combining the Two Arrays by their Index Values into their own Objects inside of an Array #2 (preferred)
+  var result = cardinality.forEach(function (v, i) {
     var myObj = {};
-    myObj[cardinality[index]] = obj;
-    return myObj;
+    myObj.cardinal = v;
+    myObj.number = numbers[i];
+    newArray.push(myObj);
   });
 
-  /**
-   *   Attemping with forEach method
-   */
-  // cardinality.forEach((key, i) => {
-  //   result[key] = numbers[i];
-  // });
-
-
-  /**
-   * Object.fromEntries ES2018 method
-   */
-  // result = Object.fromEntries(cardinality.map((_, i) => ["cardinal: " + cardinality[i], "number: " + numbers[i]]))
-
-
-  /**
-   * Attemping with map method
-   */
-  // cardinality.map((key, i) => {
-  //   result[key] = numbers[i];
-  // });
-
-
-  /**
-   * Attempting with reduce method
-   */
-  // let combineArrays = (first, second) => {
-  //   return first.reduce((acc, val, index) => {
-  //     {
-  //       acc[val] = second[index];
-  //     }
-  //     return acc;
-  //   }, {});
-  // };
+  console.log(newArray);
 
   return result;
-
   // return {
   //   cardinality,
   //   numbers,
@@ -79,36 +54,9 @@ const length = 1000;
 //   numbers = generateNumbers(length, 1, 1000000);
 var result = generateNumbers(length, 1, 1000000);
 
-console.log(result);
+// console.log(result);
 // console.log(cardinality);
 // console.log(numbers);
-
-/**
- * Attempting to seperate the Object with
- * .keys() and .values() methods
- */
-
-// const seperateObject = (result) => {
-//   const res = [];
-//   const keys = Object.keys(result);
-//   const values = Object.values(result);
-
-//   keys.forEach((key) => {
-//     res.push({
-//       cardinal: result[key],
-//     });
-//   });
-
-//   // values.forEach((value) => {
-//   //   res.push({
-//   //     number: result[value],
-//   //   });
-//   // });
-
-//   return res;
-// };
-
-// console.log(seperateObject(result));
 
 // function generateMatrixNumbers(mattrixLength, length, min, max) {
 //   var subspaces = [];
