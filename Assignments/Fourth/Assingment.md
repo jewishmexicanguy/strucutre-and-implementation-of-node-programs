@@ -13,13 +13,13 @@ This assignment will be about self direction and learning how to build programs 
 
 - Write a csv file that has the following headers/column names, "date time", "symbol", "open", "high", "low", "close", "volume".
 
-- You must demonstrate appending new rows to the CSV file
+- [X] You must demonstrate appending new rows to the CSV file
 
-- You must demonstrate inserting rows anywhere in the csv file
+- [X] You must demonstrate inserting rows anywhere in the csv file
 
-- You must demonstrate removing a row anywhere in the csv file
+- [X] You must demonstrate removing a row anywhere in the csv file
 
-- You must demonstrate changing any cell in the csv file
+- [X] You must demonstrate changing any cell in the csv file
 
   - For the sake of demonstration the values under the "date time" column should be the current date and time when the code is being run
   - "symbol" can be any combination of 6 letters from english alphabet
