@@ -22,4 +22,4 @@ myCsv.writeCSVFile("output.csv");
 
 console.log(myCsv.columns);
 
-console.log(myCsv.findCell(2, 3))
+console.log(myCsv.findCell(2, 3));
