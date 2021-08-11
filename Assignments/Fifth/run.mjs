@@ -173,9 +173,12 @@ console.log(hospitalVisitsOnceAMonth);
 
 var chap1Objects = Object.keys(myComplex);
 var chap1array = [];
+
 chap1Objects.forEach(i => {
   if(typeof myComplex[i] === 'object' && !Array.isArray(myComplex[i])) {
     chap1array.push(myComplex[i]);
   }
 });
+
 console.log('only the objects',chap1array);
+
